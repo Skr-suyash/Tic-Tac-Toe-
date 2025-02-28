@@ -1,0 +1,106 @@
+/* General Body Styling */
+body {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: #222; /* Dark background */
+    font-family: "Poppins", sans-serif;
+    color: #fff; /* White text */
+}
+
+/* Game Grid */
+.game {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    gap: 8px;
+    background: #333;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 10px 25px rgba(255, 255, 255, 0.2);
+    margin: auto;
+}
+
+/* Buttons */
+.btn {
+    background-color: #ffcc00;
+    height: 100px;
+    width: 100px;
+    font-size: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 10px;
+    font-weight: bold;
+    color: #222;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Hover Effect */
+.btn:hover {
+    background-color: #ffaa00;
+    transform: scale(1.05);
+}
+
+/* Clicked Buttons (X and O) */
+.btn:disabled {
+    cursor: not-allowed;
+    background-color: #ff9900; 
+    color: white;
+}
+
+/* Winning Message */
+.win {
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background: #ff4444;
+    box-shadow: 0px 5px 15px rgba(255, 255, 255, 0.2);
+    margin-bottom: 15px;
+}
+
+/* Winning Text */
+.win-text {
+    color: #fff; 
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+    animation: glow 1s infinite alternate;
+}
+
+/* Glow Animation */
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+    }
+    to {
+        text-shadow: 0 0 20px rgba(255, 255, 255, 1);
+    }
+}
+
+.play-again {
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 50px;
+}
+
+.play-again:hover {
+    background: linear-gradient(135deg, #feb47b, #ff7e5f);
+    transform: scale(1.05);
+}
+
+.play-again:active {
+    transform: scale(0.95);
+}
